@@ -22,8 +22,6 @@ const port = process.env.PORT;
 async function main() {
   browser = await puppeteer.launch(browserOptions);
 
-  //checkAvailability(browser);
-
   app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
   });

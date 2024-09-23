@@ -43,7 +43,7 @@ async function checkAvailability(browser: Browser, dates: string[]) {
 
                 for (let key in timeSchedules) {
                     const timeSchedule = timeSchedules[key];
-                    if (timeSchedule.displayStockStatus != 3) {
+                    if (timeSchedule.displayStockStatus != 2) {
                         availableTimeSchedules.push(timeSchedule);
                     }
                 }
@@ -60,7 +60,7 @@ async function checkAvailability(browser: Browser, dates: string[]) {
     } catch (error) {
         console.error(error);
     } finally {
-        //await page.close();
+        await page.close();
     }
 }
 
