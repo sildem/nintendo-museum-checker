@@ -1,0 +1,9 @@
+version: '3'
+services:
+  app:
+    build: .
+    pull_policy: build
+    container_name: nintendo-museum-checker
+    volumes:
+      - ./data:/home/pptruser/screenshots # Montaje de volúmenes para persistir datos si es necesario
+    restart: unless-stopped

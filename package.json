@@ -1,0 +1,30 @@
+{
+  "name": "nintendo-museum-checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "npx tsc",
+    "start": "npm run build && node dist/index.js"
+  },
+  "author": "jaehyune",
+  "license": "ISC",
+  "dependencies": {
+    "@types/cheerio": "^0.22.35",
+    "axios": "^1.7.5",
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "puppeteer": "^23.0.2",
+    "puppeteer-screen-recorder": "^3.0.5",
+    "selenium-webdriver": "^4.19.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "@types/selenium-webdriver": "^4.1.22",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.4.5"
+  }
+}
