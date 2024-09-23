@@ -7,7 +7,7 @@ services:
     ports:
       - 3001:3001
     environment:
-      - PORT=3000
+      - PORT=3001
     volumes:
       - ./data:/home/pptruser/screenshots # Montaje de volúmenes para persistir datos si es necesario
     restart: unless-stopped
