@@ -4,6 +4,10 @@ services:
     build: .
     pull_policy: build
     container_name: nintendo-museum-checker
+    ports:
+      - 3001:3001
+    environment:
+      - PORT=3000
     volumes:
       - ./data:/home/pptruser/screenshots # Montaje de volúmenes para persistir datos si es necesario
     restart: unless-stopped
