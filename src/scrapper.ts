@@ -39,12 +39,16 @@ async function checkAvailability(browser: Browser, dates: string[]) {
                     headers: headers
                 });
 
-                console.log(response.data.data.timeSchedules);
                 const timeSchedules = response.data.data.timeSchedules;
 
-                availableTimeSchedules = Object.keys(timeSchedules).filter((key) => {
-                    return timeSchedules[key].displayStockStatus != 3;
-                });
+                for (let key in timeSchedules) {
+                    const timeSchedule = timeSchedules[key];
+                    if (timeSchedule.displayStockStatus != 3) {
+                        availableTimeSchedules.push(timeSchedule);
+                    }
+                }
+
+
             } catch (error) { } finally {
                 results[date] = availableTimeSchedules;
             }
